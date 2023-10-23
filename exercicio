@@ -4,30 +4,31 @@ class Funcionario :
         self._dados = dados
 
     def getNome (self):
-        return self._nome = nome
+        return self._nome
 
     def getDados (self):
-        return self._nome = nome
+        return self._dados
 
     def setNome (self, nome):
         self._nome = nome
 
-    def setNome (self, nome):
-        self._nome = nome
+    def setDados(self, dados):
+        self._dados = dados
 
     def Contratar (self, pasta):
         pasta = open(pasta, 'a')
-
-        for nome in self.getNome():
-            for dados in self.getDados():
-                dados_pessoais = input(f'digite seus {dados}')
-                pasta.write(f'\n{dados_pessoais}')
-                print('')
-                pasta.write('\n')
-                pasta.close()
+        for dados in self.getDados():
+            dados_pessoais = input(f'Digite {dados}:')
+            pasta.write(f'\n{dados_pessoais}')
+            print('')
+        pasta.close()
     
     def LerDados (self, pasta):
         pasta = open(pasta, 'r')
 
         for linha in pasta:
-            print (linha end=' ')
+            print (linha, end=' ')
+ 
+f1 = Funcionario('Jeane', ['idade', 'cpf'])
+f1.Contratar('arquivo.txt')
+f1.LerDados('arquivo.txt')
