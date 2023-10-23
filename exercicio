@@ -1,0 +1,33 @@
+class Funcionario :
+    def __init__(self, nome, dados):
+        self._nome = nome
+        self._dados = dados
+
+    def getNome (self):
+        return self._nome = nome
+
+    def getDados (self):
+        return self._nome = nome
+
+    def setNome (self, nome):
+        self._nome = nome
+
+    def setNome (self, nome):
+        self._nome = nome
+
+    def Contratar (self, pasta):
+        pasta = open(pasta, 'a')
+
+        for nome in self.getNome():
+            for dados in self.getDados():
+                dados_pessoais = input(f'digite seus {dados}')
+                pasta.write(f'\n{dados_pessoais}')
+                print('')
+                pasta.write('\n')
+                pasta.close()
+    
+    def LerDados (self, pasta):
+        pasta = open(pasta, 'r')
+
+        for linha in pasta:
+            print (linha end=' ')
